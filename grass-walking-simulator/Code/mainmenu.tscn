@@ -1,0 +1,274 @@
+[gd_scene load_steps=17 format=3 uid="uid://cqwe34tbvje3h"]
+
+[ext_resource type="PackedScene" uid="uid://tt5uyylbvalh" path="res://Assets/3DArt/grass_menu.gltf" id="1_oy5nv"]
+[ext_resource type="Script" path="res://Code/mainmenu.gd" id="2_0ilxe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvpcp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wnfa7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3waty"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ux3gy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fh773"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rt0qa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j4jed"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xclfl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfndi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nlu3n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7nclv"]
+
+[sub_resource type="Animation" id="Animation_4wfxy"]
+resource_name = "bg_camera_animate"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainBackground/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1.8025, 1.8025, 1.8025, 2),
+"update": 0,
+"values": [Vector3(0.251, 4, 7), Vector3(0.251, 2.22821, 3.43764), Vector3(2.07047, 2.12169, 2.56677), Vector3(-3.52806, 2.12169, 2.56677)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainBackground/SubViewportContainer/SubViewport/Camera3D:rotation:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-0.523599, -0.25, 0, 0.25, 0, -0.523599, -0.25, 0, 0.25, 0, -0.523599, -0.25, 0, 0.25, 0, -0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 2, 3, 4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainBackground/SubViewportContainer/SubViewport/Camera3D:rotation:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.388493, -0.25, 0, 0.25, 0, -0.384967, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 2, 3, 4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainBackground/SubViewportContainer/SubViewport/Camera3D:rotation:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 2, 3, 4)
+}
+
+[sub_resource type="Animation" id="Animation_25r7t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainBackground/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.251, 4, 7)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainBackground/SubViewportContainer/SubViewport/Camera3D:rotation:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainBackground/SubViewportContainer/SubViewport/Camera3D:rotation:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainBackground/SubViewportContainer/SubViewport/Camera3D:rotation:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ns2ds"]
+_data = {
+"RESET": SubResource("Animation_25r7t"),
+"bg_camera_animate": SubResource("Animation_4wfxy")
+}
+
+[node name="MenuCanvas" type="CanvasLayer"]
+
+[node name="MainBackground" type="Node3D" parent="."]
+
+[node name="grass_menu" parent="MainBackground" instance=ExtResource("1_oy5nv")]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MainBackground"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="MainBackground/SubViewportContainer"]
+handle_input_locally = false
+msaa_3d = 1
+use_taa = true
+use_debanding = true
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MainBackground/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0.251, 4, 7)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MainBackground"]
+
+[node name="MainForeground" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_0ilxe")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainForeground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 94
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_right = 94
+theme_override_constants/margin_bottom = 110
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainForeground/MarginContainer"]
+layout_mode = 2
+
+[node name="Separator1" type="MarginContainer" parent="MainForeground/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="GameName" type="Label" parent="MainForeground/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 102
+text = "Grass Walking Simulator"
+
+[node name="Separator2" type="MarginContainer" parent="MainForeground/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MenuStartButton" type="Button" parent="MainForeground/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_pressed_color = Color(0.64911, 0.476705, 0.277432, 1)
+theme_override_colors/font_hover_color = Color(0.65098, 0.478431, 0.278431, 1)
+theme_override_colors/font_pressed_color = Color(0.723358, 0.433463, 0.258336, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cvpcp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_wnfa7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3waty")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ux3gy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fh773")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_rt0qa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_j4jed")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_xclfl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rfndi")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nlu3n")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7nclv")
+text = "Start Game"
+
+[node name="MenuOptionButton" type="Button" parent="MainForeground/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_pressed_color = Color(0.64911, 0.476705, 0.277432, 1)
+theme_override_colors/font_hover_color = Color(0.65098, 0.478431, 0.278431, 1)
+theme_override_colors/font_pressed_color = Color(0.723358, 0.433463, 0.258336, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cvpcp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_wnfa7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3waty")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ux3gy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fh773")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_rt0qa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_j4jed")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_xclfl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rfndi")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nlu3n")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7nclv")
+text = "Settings"
+
+[node name="MenuQuitButton" type="Button" parent="MainForeground/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_pressed_color = Color(0.64911, 0.476705, 0.277432, 1)
+theme_override_colors/font_hover_color = Color(0.65098, 0.478431, 0.278431, 1)
+theme_override_colors/font_pressed_color = Color(0.723358, 0.433463, 0.258336, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cvpcp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_wnfa7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3waty")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ux3gy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fh773")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_rt0qa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_j4jed")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_xclfl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rfndi")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nlu3n")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7nclv")
+text = "Exit Game"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ns2ds")
+}
+autoplay = "bg_camera_animate"
+speed_scale = 0.8
+
+[connection signal="pressed" from="MainForeground/MarginContainer/VBoxContainer/MenuStartButton" to="MainForeground" method="_on_menu_start_pressed"]
+[connection signal="pressed" from="MainForeground/MarginContainer/VBoxContainer/MenuOptionButton" to="MainForeground" method="_on_menu_option_pressed"]
+[connection signal="pressed" from="MainForeground/MarginContainer/VBoxContainer/MenuQuitButton" to="MainForeground" method="_on_menu_quit_pressed"]
